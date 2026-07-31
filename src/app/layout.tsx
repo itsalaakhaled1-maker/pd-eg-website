@@ -1,0 +1,24 @@
+import type { Metadata } from 'next';
+import './globals.css';
+
+export const metadata: Metadata = {
+  title: 'Press&Drink | Premium Nitrogen Coffee',
+  description: 'قهوة النيتروجين الممتازة في كبسولة صغيرة. HYMI @once - تجربة قهوة فريدة في كل رشة.',
+  keywords: 'coffee, nitrogen coffee, HYMI, Press&Drink, قهوة, نيتروجين, مصر',
+  openGraph: {
+    title: 'Press&Drink | Premium Nitrogen Coffee',
+    description: 'قهوة النيتروجين الممتازة في كبسولة صغيرة',
+    url: 'https://pd-eg.com',
+    siteName: 'Press&Drink',
+    locale: 'ar_EG',
+    type: 'website',
+  },
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="ar" dir="rtl">
+      <body className="bg-pd-dark text-pd-cream antialiased">{children}</body>
+    </html>
+  );
+}
