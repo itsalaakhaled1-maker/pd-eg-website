@@ -1,5 +1,5 @@
 import { Product } from '@/types/product';
-import { initialProducts } from './products';
+import { initialProducts } from '@/data/products';
 
 const STORAGE_KEY = 'pd-products';
 const ADMIN_KEY = 'pd-admin-auth';
