@@ -10,8 +10,8 @@ import { getProducts } from '@/lib/storage';
 import { Product } from '@/types/product';
 import { Coffee, Droplets, Zap, ChevronDown } from 'lucide-react';
 
-const Hero3D = dynamic(() => import('@/components/three/Hero3D'), { ssr: false });
-const ProductSplit3D = dynamic(() => import('@/components/three/ProductSplit3D'), { ssr: false });
+const CoffeeBeans3D = dynamic(() => import('@/components/three/CoffeeBeans3D'), { ssr: false });
+const CoffeeWave3D = dynamic(() => import('@/components/three/CoffeeWave3D'), { ssr: false });
 
 function LoadingFallback() {
   return <div className="w-full h-[500px] flex items-center justify-center"><div className="animate-pulse text-pd-gold/50">جاري التحميل...</div></div>;
@@ -33,23 +33,31 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="relative min-h-screen flex flex-col items-center justify-center pt-20 pb-10 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center_bottom,#2a1810_0%,#1a0f0a_70%)]" />
+
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {[...Array(20)].map((_, i) => (
-            <div key={i} className="absolute w-1 h-1 bg-pd-gold/20 rounded-full animate-float" style={{ left: `${Math.random() * 100}%`, top: `${Math.random() * 100}%`, animationDelay: `${Math.random() * 5}s`, animationDuration: `${3 + Math.random() * 4}s` }} />
+            <div key={i} className="absolute w-1 h-1 bg-pd-gold/20 rounded-full animate-float"
+              style={{ left: `${Math.random() * 100}%`, top: `${Math.random() * 100}%`, animationDelay: `${Math.random() * 5}s`, animationDuration: `${3 + Math.random() * 4}s` }} />
           ))}
         </div>
 
         <div className="relative z-10 text-center max-w-4xl mx-auto">
           <p className="text-pd-gold/60 text-sm font-medium tracking-[0.3em] uppercase mb-6">Nitrogen Preserved · Premium Coffee</p>
+
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-4">
             <span className="text-gradient">Press</span><span className="text-pd-gold">&</span><span className="text-gradient">Drink</span>
           </h1>
-          <p className="text-pd-accent/70 text-lg md:text-xl max-w-xl mx-auto mb-8 leading-relaxed">قهوة النيتروجين الممتازة، في كبسولة صغيرة تناسب حياتك السريعة</p>
+
+          <p className="text-pd-accent/70 text-lg md:text-xl max-w-xl mx-auto mb-8 leading-relaxed">
+            قهوة النيتروجين الممتازة، في كبسولة صغيرة تناسب حياتك السريعة
+          </p>
+
           <WhatsAppButton size="lg" />
         </div>
 
-        <div className="relative z-10 w-full max-w-2xl mx-auto mt-8">
-          {mounted ? <Suspense fallback={<LoadingFallback />}><Hero3D /></Suspense> : <LoadingFallback />}
+        {/* 3D Coffee Beans */}
+        <div className="relative z-10 w-full max-w-3xl mx-auto mt-8">
+          {mounted ? <Suspense fallback={<LoadingFallback />}><CoffeeBeans3D /></Suspense> : <LoadingFallback />}
         </div>
 
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-pd-accent/30 animate-bounce">
@@ -58,13 +66,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 3D Split Section */}
+      {/* 3D Coffee Wave Section */}
       <section className="relative">
         <div className="text-center py-16 px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-pd-cream mb-4">تجربة فريدة في كل رشة</h2>
-          <p className="text-pd-accent/60 max-w-lg mx-auto leading-relaxed">صُممت خصيصاً لتناسب حياتك السريعة. تقنية حفظ النيتروجين تحافظ على نكهة القهوة الأصيلة</p>
+          <p className="text-pd-accent/60 max-w-lg mx-auto leading-relaxed">
+            صُممت خصيصاً لتناسب حياتك السريعة. تقنية حفظ النيتروجين تحافظ على نكهة القهوة الأصيلة
+          </p>
         </div>
-        {mounted ? <Suspense fallback={<LoadingFallback />}><ProductSplit3D /></Suspense> : <LoadingFallback />}
+        {mounted ? <Suspense fallback={<LoadingFallback />}><CoffeeWave3D /></Suspense> : <LoadingFallback />}
       </section>
 
       {/* Features */}

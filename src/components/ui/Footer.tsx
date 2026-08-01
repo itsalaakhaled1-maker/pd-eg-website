@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { Coffee, MapPin } from 'lucide-react';
+import Image from 'next/image';
+import { MapPin } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -7,9 +8,9 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <Coffee className="w-5 h-5 text-pd-gold" />
-              <span className="text-pd-cream font-bold text-lg">Press<span className="text-pd-gold">&</span>Drink</span>
+            <Link href="/" className="flex items-center gap-3 mb-4">
+              <Image src="/logo-icon.png" alt="Press&Drink" width={32} height={32} className="rounded-lg" />
+              <Image src="/logo.png" alt="Press&Drink" width={140} height={35} className="h-7 w-auto object-contain" />
             </Link>
             <p className="text-pd-accent/50 text-sm leading-relaxed">قهوة النيتروجين الممتازة، في كبسولة صغيرة تناسب حياتك السريعة.</p>
           </div>
