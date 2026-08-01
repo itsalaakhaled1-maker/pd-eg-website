@@ -4,8 +4,8 @@ export const initialProducts: Product[] = [
   {
     id: 'hymi-mocha',
     name: 'Mocha',
-    flavor: 'قهوة',
-    flavorCn: 'الموكا',
+    flavor: 'الموكا',
+    flavorCn: 'قهوة',
     description: 'Rich mocha coffee with dark chocolate notes, preserved with nitrogen technology to maintain authentic taste.',
     descriptionAr: 'قهوة موكا غنية بنكهة الشوكولاتة الداكنة، محفوظة بتقنية النيتروجين للحفاظ على الطعم الأصيل.',
     price: 420,
@@ -20,8 +20,8 @@ export const initialProducts: Product[] = [
   {
     id: 'hymi-latte',
     name: 'Latte',
-    flavor: 'قهوة',
-    flavorCn: 'اللاتية',
+    flavor: 'اللاتية',
+    flavorCn: 'قهوة',
     description: 'A smooth blend of coffee and milk, giving you the perfect balance between strength and softness.',
     descriptionAr: 'مزيج ناعم من القهوة والحليب، يمنحك توازناً مثالياً بين القوة والنعومة.',
     price: 415,
