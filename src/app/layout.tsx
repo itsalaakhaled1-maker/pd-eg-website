@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Press&Drink | Premium Nitrogen Coffee',
-    description: 'قهوة بجودة مختارة بعناية ، محفوظة بتنقية النيتروجين في كبسولة صغيرة تناسب حياتك السريعة',
+    description: 'قهوة بجودة عالية ومختارة بعناية ، محفوظة بتنقية النيتروجين في كبسولة صغيرة تناسب حياتك السريعة',
     images: ['/og-image.png'],
   },
 };
