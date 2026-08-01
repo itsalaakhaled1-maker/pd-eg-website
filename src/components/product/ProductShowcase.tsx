@@ -59,7 +59,7 @@ export default function ProductShowcase() {
         {/* Product Image with scroll animation */}
         <div ref={imageRef} className="relative transition-transform duration-100">
           <Image
-            src="/images/product-mocha.png"
+            src="/images/mocha.png"
             alt="HYMI @once Mocha"
             width={1000}
             height={400}
