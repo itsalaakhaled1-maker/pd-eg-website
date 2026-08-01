@@ -38,14 +38,12 @@ export default function AboutPage() {
             <div className="bg-gradient-to-br from-pd-coffee/30 to-pd-dark rounded-3xl p-8 border border-pd-gold/10 flex items-center justify-center">
               <div className="text-center">
                 <Image 
-                  src="/logo.png" 
+                  src="/logo1.png" 
                   alt="Press&Drink Logo" 
                   width={200} 
                   height={80} 
                   className="mx-auto mb-4 object-contain"
                 />
-                <p className="text-pd-gold font-bold text-2xl">Press&Drink</p>
-                <p className="text-pd-accent/40 text-sm mt-2">منذ 2024</p>
               </div>
             </div>
           </div>
