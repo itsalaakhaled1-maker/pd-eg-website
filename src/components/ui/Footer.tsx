@@ -27,7 +27,14 @@ export default function Footer() {
           <div>
             <h4 className="text-pd-cream font-semibold mb-4">تواصل معنا</h4>
             <div className="flex flex-col gap-2">
-              <a href="https://wa.me/201064688315" target="_blank" rel="noopener noreferrer" className="text-pd-accent/50 hover:text-whatsapp transition-colors text-sm">واتساب: +20 106 468 8315</a>
+              <a 
+                href="https://wa.me/201064688315" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-pd-accent/50 hover:text-whatsapp transition-colors text-sm"
+              >
+                <span dir="ltr">+20 106 468 8315</span>
+              </a>
               <p className="text-pd-accent/50 text-sm flex items-center gap-2"><MapPin className="w-4 h-4" /><span>مصر</span></p>
             </div>
           </div>
