@@ -40,8 +40,8 @@ export default function AboutPage() {
                 <Image 
                   src="/logo1.png" 
                   alt="Press&Drink Logo" 
-                  width={200} 
-                  height={80} 
+                  width={450} 
+                  height={150} 
                   className="mx-auto mb-4 object-contain"
                 />
               </div>
