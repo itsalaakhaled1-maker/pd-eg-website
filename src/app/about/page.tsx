@@ -15,7 +15,7 @@ export default function AboutPage() {
               قصة <span className="text-pd-gold">Press&Drink</span>
             </h1>
             <p className="text-pd-accent/60 text-lg leading-relaxed max-w-2xl mx-auto">
-              نؤمن بأن القهوة ليست مجرد مشروب، بل هي تجربة. من هنا جاءت فكرة Press&Drink — 
+              نؤمن بأن القهوة ليست مجرد مشروب، بل هي تجربة. من هنا جاءت فكرة coffee@once — 
               جلب تجربة القهوة الممتازة إلى يدك في أي وقت وأي مكان.
             </p>
           </div>
@@ -25,7 +25,7 @@ export default function AboutPage() {
             <div className="space-y-6">
               <h2 className="text-2xl font-bold text-pd-cream">كيف بدأنا؟</h2>
               <p className="text-pd-accent/60 leading-relaxed">
-                بدأت Press&Drink برؤية بسيطة: جعل القهوة الممتازة متاحة للجميع، في أي وقت وأي مكان. 
+                بدأت برؤية بسيطة: جعل القهوة الممتازة متاحة للجميع، في أي وقت وأي مكان. 
                 لاحظنا أن معظم الناس يضطرون للتنازل عن جودة القهوة بسبب انشغالهم، 
                 فقررنا أن نغير ذلك.
               </p>
