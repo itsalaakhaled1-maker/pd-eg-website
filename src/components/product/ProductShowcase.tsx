@@ -50,7 +50,7 @@ export default function ProductShowcase() {
 
       <div className="relative z-10 max-w-5xl mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-pd-cream mb-4">تجربة فريدة في كل رشة</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-pd-cream mb-4">تجربة فريدة في كل كبسولة</h2>
           <p className="text-pd-accent/60 max-w-lg mx-auto leading-relaxed">
             صُممت خصيصاً لتناسب حياتك السريعة. تقنية حفظ النيتروجين تحافظ على نكهة القهوة الأصيلة
           </p>

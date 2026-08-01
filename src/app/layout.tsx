@@ -3,7 +3,7 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Press&Drink | Premium Nitrogen Coffee',
-  description: 'قهوة النيتروجين الممتازة في كبسولة صغيرة. HYMI @once - تجربة قهوة فريدة في كل رشة.',
+  description: 'قهوة النيتروجين الممتازة في كبسولة صغيرة. HYMI @once - تجربة قهوة فريدة في كل ضغطة.',
   keywords: 'coffee, nitrogen coffee, HYMI, Press&Drink, قهوة, نيتروجين, مصر',
   openGraph: {
     title: 'Press&Drink | Premium Nitrogen Coffee',
