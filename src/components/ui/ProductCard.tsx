@@ -3,6 +3,7 @@
 import { Product } from '@/types/product';
 import WhatsAppButton from './WhatsAppButton';
 import { Sparkles } from 'lucide-react';
+import Image from 'next/image';
 
 interface ProductCardProps {
   product: Product;
@@ -17,20 +18,23 @@ export default function ProductCard({ product }: ProductCardProps) {
           {product.badge}
         </div>
       )}
-
-      <div className="w-full h-48 rounded-2xl mb-5 flex items-center justify-center relative overflow-hidden" style={{ background: product.gradient }}>
-        <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-        <div className="relative z-10 text-center">
-          <div className="w-20 h-8 bg-pd-cream/20 rounded-full mx-auto mb-2 backdrop-blur-sm" />
-          <p className="text-pd-cream font-bold text-lg tracking-wider">{product.name.split(' ')[0]}</p>
-          <p className="text-pd-gold text-xs">{product.flavorCn}</p>
-        </div>
+      
+      {/* Product Image - REAL IMAGE */}
+      <div className="w-full h-56 rounded-2xl mb-5 relative overflow-hidden bg-pd-coffee/20">
+        <Image
+          src={product.image}
+          alt={product.name}
+          fill
+          className="object-cover group-hover:scale-105 transition-transform duration-500"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
       </div>
-
+      
       <h3 className="text-pd-cream font-bold text-xl mb-1">{product.name}</h3>
       <p className="text-pd-gold text-sm font-medium mb-2">{product.flavorCn} · {product.flavor}</p>
       <p className="text-pd-accent/60 text-sm leading-relaxed mb-4 line-clamp-2">{product.descriptionAr}</p>
-
+      
       <div className="flex items-center justify-between">
         <div className="flex items-baseline gap-1">
           <span className="text-pd-gold font-bold text-2xl">{product.price}</span>
