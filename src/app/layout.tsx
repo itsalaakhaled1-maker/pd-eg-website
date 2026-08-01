@@ -12,6 +12,20 @@ export const metadata: Metadata = {
     siteName: 'Press&Drink',
     locale: 'ar_EG',
     type: 'website',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 960,
+        height: 1280,
+        alt: 'Press&Drink - Premium Nitrogen Coffee',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Press&Drink | Premium Nitrogen Coffee',
+    description: 'قهوة النيتروجين الممتازة في كبسولة صغيرة',
+    images: ['/og-image.png'],
   },
 };
 
