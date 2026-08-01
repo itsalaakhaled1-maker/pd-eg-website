@@ -41,7 +41,7 @@ export default function HomePage() {
           </h1>
 
           <p className="text-pd-accent/70 text-lg md:text-xl max-w-xl mx-auto mb-8 leading-relaxed">
-            قهوة بجودة مختارة بعناية ، محفزطة بتنقية النيتروجين في كبسولة صغيرة تناسب حياتك السريعة
+            قهوة بجودة مختارة بعناية ، محفوظة بتنقية النيتروجين في كبسولة صغيرة تناسب حياتك السريعة
           </p>
 
           <WhatsAppButton size="lg" />

@@ -12,7 +12,7 @@ export default function Footer() {
               <Image src="/logo-icon.png" alt="Press&Drink" width={32} height={32} className="rounded-lg" />
               <Image src="/logo.png" alt="Press&Drink" width={140} height={35} className="h-7 w-auto object-contain" />
             </Link>
-            <p className="text-pd-accent/50 text-sm leading-relaxed">قهوة النيتروجين الممتازة، في كبسولة صغيرة تناسب حياتك السريعة.</p>
+            <p className="text-pd-accent/50 text-sm leading-relaxed"> قهوة بجودة مختارة بعناية ، محفوظة بتنقية النيتروجين في كبسولة صغيرة تناسب حياتك السريعة</p>
           </div>
 
           <div>
