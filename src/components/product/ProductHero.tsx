@@ -49,7 +49,7 @@ export default function ProductHero() {
       {/* Product Image */}
       <div className="product-image transition-transform duration-300 ease-out">
         <Image
-          src="/images/product-mocha.png"
+          src="/images/latte.png"
           alt="HYMI @once Mocha - Premium Nitrogen Coffee"
           width={900}
           height={350}
