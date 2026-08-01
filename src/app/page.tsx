@@ -1,28 +1,20 @@
 'use client';
 
-import { useEffect, useState, Suspense } from 'react';
-import dynamic from 'next/dynamic';
+import { useEffect, useState } from 'react';
 import Navigation from '@/components/ui/Navigation';
 import ProductCard from '@/components/ui/ProductCard';
 import WhatsAppButton from '@/components/ui/WhatsAppButton';
 import Footer from '@/components/ui/Footer';
+import ProductHero from '@/components/product/ProductHero';
+import ProductShowcase from '@/components/product/ProductShowcase';
 import { getProducts } from '@/lib/storage';
 import { Product } from '@/types/product';
 import { Coffee, Droplets, Zap, ChevronDown } from 'lucide-react';
 
-const CoffeeBeans3D = dynamic(() => import('@/components/three/CoffeeBeans3D'), { ssr: false });
-const CoffeeWave3D = dynamic(() => import('@/components/three/CoffeeWave3D'), { ssr: false });
-
-function LoadingFallback() {
-  return <div className="w-full h-[500px] flex items-center justify-center"><div className="animate-pulse text-pd-gold/50">جاري التحميل...</div></div>;
-}
-
 export default function HomePage() {
   const [products, setProducts] = useState<Product[]>([]);
-  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
     setProducts(getProducts().filter(p => p.isActive));
   }, []);
 
@@ -55,9 +47,9 @@ export default function HomePage() {
           <WhatsAppButton size="lg" />
         </div>
 
-        {/* 3D Coffee Beans */}
-        <div className="relative z-10 w-full max-w-3xl mx-auto mt-8">
-          {mounted ? <Suspense fallback={<LoadingFallback />}><CoffeeBeans3D /></Suspense> : <LoadingFallback />}
+        {/* Product Image with 3D tilt effect */}
+        <div className="relative z-10 w-full max-w-3xl mx-auto mt-8 px-4">
+          <ProductHero />
         </div>
 
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-pd-accent/30 animate-bounce">
@@ -66,16 +58,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 3D Coffee Wave Section */}
-      <section className="relative">
-        <div className="text-center py-16 px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-pd-cream mb-4">تجربة فريدة في كل رشة</h2>
-          <p className="text-pd-accent/60 max-w-lg mx-auto leading-relaxed">
-            صُممت خصيصاً لتناسب حياتك السريعة. تقنية حفظ النيتروجين تحافظ على نكهة القهوة الأصيلة
-          </p>
-        </div>
-        {mounted ? <Suspense fallback={<LoadingFallback />}><CoffeeWave3D /></Suspense> : <LoadingFallback />}
-      </section>
+      {/* Product Showcase with Scroll Animation */}
+      <ProductShowcase />
 
       {/* Features */}
       <section className="py-20 px-4">
