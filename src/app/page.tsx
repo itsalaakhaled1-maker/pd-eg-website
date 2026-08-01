@@ -88,7 +88,7 @@ export default function HomePage() {
       <section className="py-20 px-4" id="products">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-pd-cream mb-4">مجموعتنا</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-pd-cream mb-4">منتجاتنا</h2>
             <p className="text-pd-accent/50">اختر نكهتك المفضلة واطلبها الآن</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
